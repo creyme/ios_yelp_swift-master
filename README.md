@@ -22,7 +22,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [ ] Search results page
-   - [ ] Infinite scroll for restaurant results.
+   - [x] Infinite scroll for restaurant results.
    - [ ] Implement map view of restaurant results.
 - [ ] Filter page
    - [ ] Implement a custom switch instead of the default UISwitch.
@@ -32,7 +32,11 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] App icon and launch screen.
+- [x] Always scrolls to top.
+- [ ] Contact details on restaurant detail page.
+- [ ] Save toggled filters until untoggled.
+- [ ] Show active filters on search results tableview and mapview.
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
