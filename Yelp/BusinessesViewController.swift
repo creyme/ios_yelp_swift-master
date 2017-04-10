@@ -123,6 +123,10 @@ extension BusinessesViewController: UITableViewDelegate, UITableViewDataSource, 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        self.performSegue(withIdentifier: "businessDetailsSegue", sender: nil)
+    }
     
     func filtersViewController(filtersViewConroller: FiltersViewController, didUpdateFilters filters: [String : AnyObject]) {
         
@@ -139,22 +143,51 @@ extension BusinessesViewController: UITableViewDelegate, UITableViewDataSource, 
 
         }
 
+        
+        
     }
 
 
-    
+// SEGUE ------------------------------------------------------------------
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let navigationController = segue.destination as! UINavigationController
+        print ("prepare for segue")
+        
+        //let navigationController = segue.destination as! UINavigationController
         /*if navigationController.viewControllers[0] is MapViewController {
             let mapViewController = navigationController.viewControllers[0] as! MapViewController
             mapViewController.delegate(self)
         }*/
-        let filtersViewController = navigationController.topViewController as! FiltersViewController
+        /*let filtersViewController = navigationController.topViewController as! FiltersViewController
         
         filtersViewController.delegate = self
-    }
+        */
+
+        
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+            let errormessage = "none"
+            if let cell = sender as? BusinessCell {
+            let indexPath = tableView.indexPath(for: cell)
+            let businessDetails = filteredBusiness[indexPath!.row]
+                print (businessDetails.name ?? "0")
+            
+            let detailsViewController = segue.destination as! DetailsViewController
+            
+            
+            // Pass the selected object to the new view controller.
+            
+            detailsViewController.businessDetail = businessDetails
+        }
+           
     
+    }
 }
+
+
+
+
+
+
 
 
 
@@ -207,7 +240,6 @@ extension BusinessesViewController: UISearchBarDelegate {
     
 }
 
-
 // SCROLLVIEW FUNCTIONS ---------------------------------------------------------------------
 
 extension BusinessesViewController: UIScrollViewDelegate {
@@ -244,12 +276,12 @@ extension BusinessesViewController: UIScrollViewDelegate {
         
         offSet = offSet + 10
         filters["offset"] = offSet as AnyObject
-        
+       /*
         let deals = filters["deals_filter"] as? Bool
         let distance = filters["radius_filter"] as? String
         let sort = filters["sort"] as? YelpSortMode
         let categories = filters["category_filter"] as? [String]
-        
+        */
         Business.searchWithTerm(term: currentSearch, offset: offSet) { (businesses, error) in
             self.isMoreDataLoading = false
             self.loadingMoreView!.stopAnimating()
@@ -265,10 +297,4 @@ extension BusinessesViewController: UIScrollViewDelegate {
         
     }
 }
-
-
-
-
-
-
 
