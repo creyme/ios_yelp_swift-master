@@ -134,6 +134,7 @@ extension BusinessesViewController: UITableViewDelegate, UITableViewDataSource, 
             self.businesses = businesses
             self.filteredBusiness = self.businesses
             self.tableView.reloadData()
+            self.tableView.scrollsToTop = true
 
             }
         
@@ -218,6 +219,7 @@ extension BusinessesViewController: UISearchBarDelegate {
                 // Set UIImage(no results)
             }*/
             self.tableView.reloadData()
+            self.tableView.scrollsToTop = true
         }
     
     
@@ -233,6 +235,7 @@ extension BusinessesViewController: UISearchBarDelegate {
                 self.businesses = businesses
                 self.filteredBusiness = self.businesses
                 self.tableView.reloadData()
+                self.tableView.scrollsToTop = true
             } else {
                 print("0 search")
             }
