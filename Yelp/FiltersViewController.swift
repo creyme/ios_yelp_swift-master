@@ -75,6 +75,11 @@ class FiltersViewController: UIViewController {
                 if indexPath.section == 0 {
                     dealIsOn = true
                 }
+                
+                if indexPath.section == 1 {
+                    
+                }
+                
                 if indexPath.section == 3 {
                     selectedCategories.append(filtersArray[indexPath.section].values[indexPath.row]["code"]!)
                 }
@@ -91,7 +96,7 @@ class FiltersViewController: UIViewController {
         }
         
         filters["deals_filter"] = dealIsOn as AnyObject?
-        
+
         filters["sort"] = currentSort.1 as AnyObject
         
         delegate?.filtersViewController?(filtersViewConroller: self, didUpdateFilters: filters)

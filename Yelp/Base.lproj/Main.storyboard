@@ -208,20 +208,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnU-Hb-z4r">
-                                                    <rect key="frame" x="8" y="9" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="8" y="9" width="43" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="ZnU-Hb-z4r" secondAttribute="bottom" constant="9.5" id="ATu-Sw-b1g"/>
                                                 <constraint firstItem="ZnU-Hb-z4r" firstAttribute="leading" secondItem="MRJ-8O-SVE" secondAttribute="leading" constant="8" id="IFL-HM-3U5"/>
+                                                <constraint firstItem="ZnU-Hb-z4r" firstAttribute="centerY" secondItem="MRJ-8O-SVE" secondAttribute="centerY" id="bCm-t9-KtY"/>
                                                 <constraint firstAttribute="trailing" secondItem="Shc-d5-yMo" secondAttribute="trailing" constant="11" id="fGe-91-ydi"/>
-                                                <constraint firstItem="Shc-d5-yMo" firstAttribute="centerY" secondItem="QYY-k1-a6I" secondAttribute="centerY" id="kdE-rJ-4Og"/>
-                                                <constraint firstItem="ZnU-Hb-z4r" firstAttribute="top" secondItem="MRJ-8O-SVE" secondAttribute="top" constant="9" id="uhq-H3-nI7"/>
+                                                <constraint firstItem="Shc-d5-yMo" firstAttribute="centerY" secondItem="MRJ-8O-SVE" secondAttribute="centerY" id="hkX-Mz-db4"/>
+                                                <constraint firstItem="QYY-k1-a6I" firstAttribute="centerY" secondItem="MRJ-8O-SVE" secondAttribute="centerY" id="mLR-K3-Udx"/>
                                                 <constraint firstItem="QYY-k1-a6I" firstAttribute="centerX" secondItem="MRJ-8O-SVE" secondAttribute="centerX" id="xTo-gu-iex"/>
-                                                <constraint firstItem="QYY-k1-a6I" firstAttribute="centerY" secondItem="ZnU-Hb-z4r" secondAttribute="centerY" id="zyd-bM-JQ3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -230,38 +229,37 @@
                                             <outlet property="switchLabel" destination="ZnU-Hb-z4r" id="fSj-SV-KXt"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExpandableCell" rowHeight="34" id="CR7-xH-Un4" customClass="ExpandableCell" customModule="Yelp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="96" width="375" height="34"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExpandableCell" rowHeight="40" id="CR7-xH-Un4" customClass="ExpandableCell" customModule="Yelp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="96" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CR7-xH-Un4" id="LtG-F9-tbo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gea-zS-F8B">
-                                                    <rect key="frame" x="8" y="6" width="43" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="nw1-76-q1E">
-                                                    <rect key="frame" x="331" y="4" width="36" height="25"/>
+                                                    <rect key="frame" x="331" y="7" width="36" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="36" id="3pL-aT-iG5"/>
                                                         <constraint firstAttribute="height" constant="25" id="OjG-el-e6H"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwR-eg-A88">
+                                                    <rect key="frame" x="8" y="9" width="43" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nw1-76-q1E" firstAttribute="centerY" secondItem="Gea-zS-F8B" secondAttribute="centerY" id="1W1-a0-6VY"/>
-                                                <constraint firstItem="Gea-zS-F8B" firstAttribute="leading" secondItem="LtG-F9-tbo" secondAttribute="leading" constant="8" id="4Xg-nC-Jro"/>
+                                                <constraint firstItem="ZwR-eg-A88" firstAttribute="leading" secondItem="LtG-F9-tbo" secondAttribute="leading" constant="8" id="0l9-GR-ICI"/>
+                                                <constraint firstItem="ZwR-eg-A88" firstAttribute="centerY" secondItem="LtG-F9-tbo" secondAttribute="centerY" id="9Ln-tL-bWy"/>
+                                                <constraint firstItem="nw1-76-q1E" firstAttribute="centerY" secondItem="LtG-F9-tbo" secondAttribute="centerY" id="DwN-ew-0Sa"/>
                                                 <constraint firstAttribute="trailing" secondItem="nw1-76-q1E" secondAttribute="trailing" constant="8" id="aUJ-OF-5nk"/>
-                                                <constraint firstItem="Gea-zS-F8B" firstAttribute="top" secondItem="LtG-F9-tbo" secondAttribute="top" constant="6" id="bZT-lL-Q6u"/>
-                                                <constraint firstAttribute="bottom" secondItem="Gea-zS-F8B" secondAttribute="bottom" constant="7" id="fkc-hL-4ec"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="expandableArrow" destination="nw1-76-q1E" id="ntC-0T-C94"/>
-                                            <outlet property="expandableLabel" destination="Gea-zS-F8B" id="Mch-VF-ufK"/>
+                                            <outlet property="expandableLabel" destination="ZwR-eg-A88" id="z9O-rC-mkO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
