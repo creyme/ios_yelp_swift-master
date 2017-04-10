@@ -134,7 +134,7 @@
                     <navigationItem key="navigationItem" id="8MG-ta-J0t">
                         <barButtonItem key="leftBarButtonItem" title="Filter" id="WeS-8c-6v2">
                             <connections>
-                                <segue destination="ZoC-In-FXi" kind="presentation" id="XLc-53-gNc"/>
+                                <segue destination="ZoC-In-FXi" kind="presentation" identifier="filtersViewControllerSegue" id="XLc-53-gNc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Map" id="pvV-e3-ACd"/>

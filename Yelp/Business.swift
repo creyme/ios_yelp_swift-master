@@ -67,12 +67,12 @@ class Business: NSObject {
             distance = nil
         }
         
-        if let locationCoordinate = dictionary["location"] as? NSDictionary,
-            let coordinates = locationCoordinate["coordinate"] as? NSDictionary,
-            let latitude = coordinates["latitude"] as? CLLocationDegrees,
-            let longitude = coordinates["longitude"] as? CLLocationDegrees {
+        if let loca = dictionary["location"] as? NSDictionary,
+            let coordinates = loca["coordinate"] as? NSDictionary,
+            let lat = coordinates["latitude"] as? CLLocationDegrees,
+            let long = coordinates["longitude"] as? CLLocationDegrees {
             
-            coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
         } else {
             coordinate = nil
         }
@@ -101,8 +101,12 @@ class Business: NSObject {
     class func searchWithTerm(term: String, offset: Int, completion: @escaping ([Business]?, Error?) -> Void) {
         _ = YelpClient.sharedInstance.searchWithTerm(term, offset: offset, completion: completion)
     }
-    
+    /*
     class func searchWithTerm(term: String, offset: Int?, sort: YelpSortMode?, radius: Int?, categories: [String]?, deals: Bool?, completion: @escaping ([Business]?, Error?) -> Void) -> Void {
         _ = YelpClient.sharedInstance.searchWithTerm(term, offset: offset!+10, sort: sort, radius: radius, categories: categories, deals: deals, completion: completion)
+ */
+    class func searchWithTerm(filter: [String:AnyObject], term: String, offset: Int, completion: @escaping ([Business]?, Error?) -> Void) -> Void {
+        print(filter)
+        _ = YelpClient.sharedInstance.searchWithTerm(filter, term: term, offset: offset, completion: completion)
     }
 }
