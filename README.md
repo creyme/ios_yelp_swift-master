@@ -2,7 +2,7 @@
 
 **Yelp** is a Yelp search app using the [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api).
 
-Time spent: **16** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -47,7 +47,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/creyme/ios_yelp_swift-master/blob/master/CREYMEYELP-required.gif?raw=true' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
