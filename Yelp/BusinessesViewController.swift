@@ -242,7 +242,7 @@ extension BusinessesViewController: UIScrollViewDelegate {
     func loadMoreData() {
         
         
-        offSet += 10
+        offSet = offSet + 10
         filters["offset"] = offSet as AnyObject
         
         let deals = filters["deals_filter"] as? Bool
@@ -253,8 +253,13 @@ extension BusinessesViewController: UIScrollViewDelegate {
         Business.searchWithTerm(term: currentSearch, offset: offSet) { (businesses, error) in
             self.isMoreDataLoading = false
             self.loadingMoreView!.stopAnimating()
-            self.businesses! += businesses!
-            self.tableView.reloadData()
+                //self.filteredBusiness += businesses!
+                //self.filteredBusiness.append(self.businesses)
+            for business in businesses! {
+                self.businesses = businesses
+                self.filteredBusiness = self.businesses
+            }
+             self.tableView.reloadData()
         }
         
         

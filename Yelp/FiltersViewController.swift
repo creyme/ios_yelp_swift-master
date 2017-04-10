@@ -117,7 +117,7 @@ extension FiltersViewController: UITableViewDelegate, UITableViewDataSource, Swi
     
     // Section height
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 10
     }
 
     // Number of rows
