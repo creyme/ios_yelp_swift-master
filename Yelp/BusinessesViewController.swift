@@ -47,7 +47,7 @@ class BusinessesViewController: UIViewController {
         
         // KEYBOARD SETTINGS
         let hideKeyboard = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardOnTap(_:)))
-        hideKeyboard.numberOfTapsRequired = 1
+        hideKeyboard.numberOfTapsRequired = 2
         self.view.isUserInteractionEnabled = true
         self.view.addGestureRecognizer(hideKeyboard)
         
@@ -160,28 +160,23 @@ extension BusinessesViewController: UITableViewDelegate, UITableViewDataSource, 
             filtersViewController.delegate = self
             
         } else {
-        
-                let cell = sender as! UITableViewCell
-                let indexPath = tableView.indexPath(for: cell)
-                let businessDetails = filteredBusiness[indexPath!.row]
-                    print (businessDetails.name ?? "0")
-            
-                let detailsViewController = segue.destination as! DetailsViewController
-            
-            
-                // Pass the selected object to the new view controller.
-            
-                detailsViewController.businessDetail = businessDetails
-        }
-           
+            if segue.identifier == "businessDetailsSegue" {
+            let detailsViewController = segue.destination as! DetailsViewController
+                if let cell = sender as? BusinessCell {
+                    self.tableView.deselectRow(at: self.tableView.indexPath(for: cell)!, animated: true)
+                    detailsViewController.businessDetail = self.businesses![(self.tableView.indexPath(for: cell)!.row)]
+                }
+                
+            }
     
+        }
     }
+
+
+
+
+
 }
-
-
-
-
-
 
 
 

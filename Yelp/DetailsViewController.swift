@@ -27,7 +27,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         
 
-                if businessDetail.imageURL != nil {
+                /*if businessDetail.imageURL != nil {
                     businessImageView.setImageWith(businessDetail.imageURL!)
                 } else {
                     businessImageView.image = UIImage(named: "icon1@2x.png")
@@ -39,12 +39,14 @@ class DetailsViewController: UIViewController {
                 }
                 
                 
-                nameLabel.text = businessDetail.name
-                distanceLabel.text = businessDetail.distance
-                reviewsCounterLabel.text = "\(businessDetail.reviewCount!) Reviews"
-                addressLabel.text = businessDetail.address
-                categoriesLabel.text = businessDetail.categories
+                self.nameLabel.text = businessDetail.name
+                self.distanceLabel.text = businessDetail.distance
+                self.reviewsCounterLabel.text = "\(businessDetail.reviewCount!) Reviews"
+                self.addressLabel.text = businessDetail.address
+                self.categoriesLabel.text = businessDetail.categories
                 
+        */
+        
         
     }
     
